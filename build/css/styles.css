@@ -11844,12 +11844,24 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+
 .header__logo {
   width: 10rem;
   transition: transform 1s;
 }
 .header__logo:hover {
   transform: rotate(3turn);
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

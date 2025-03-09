@@ -6,7 +6,7 @@
     <title>Bienvenida</title>
     <link rel='stylesheet' href='build/css/styles.css' type='text/css'>
 </head>
-<body class="bg-secondary">
+<body class="bg-secondary d-flex flex-column">
     <header class="header bg-primary">
         <nav class="navbar navbar-expand-lg container">
             <div class="container-fluid">
@@ -34,15 +34,67 @@
           </nav>
     </header>
     <main class="container">
-      <section>
-          
+      <section class="py-5">
+        <h1 class="text-center text-uppercase">Inscripción</h1>
+
+        <form action="#" class="needs-validation" novalidate>
+          <div class="mt-3">
+            <label for="input-nombre" class="form-label">Nombre del equipo</label>
+            <input type="nombre" name="nombre" id="input-nombre" class="form-control" required />
+            <div class="valid-feedback">Campo válido.</div>
+            <div class="invalid-feedback">Debes ingresar el nombre del equipo.</div>
+          </div>
+
+          <div class="mt-3">
+            <label for="input-jugadores" class="form-label">Correo electrónico</label>
+            <input type="number" name="jugadores" id="input-jugadores" class="form-control" min="6" max="12" required />
+            <div id="email-help-block" class="form-text">
+              Los equipos son de entre 6 y 12 jugadores.
+            </div>
+            <div class="valid-feedback">Campo válido.</div>
+            <div class="invalid-feedback">Debes ingresar el número de jugadores; y que sea entre 6 y 12, ambos incluidos.</div>
+          </div>
+
+          <div class="mt-3">
+            <label for="input-email" class="form-label">Correo electrónico</label>
+            <input type="email" name="email" id="input-email" class="form-control" required />
+            <div id="email-help-block" class="form-text">
+              No compartiremos tu dirección de email con nadie más.
+            </div>
+            <div class="valid-feedback">Campo válido.</div>
+            <div class="invalid-feedback">Debes completar el correo electrónico.</div>
+          </div>
+          <button type="submit">Inscribirse</button>
+        </form>
       </section>
     </main>
     
     <footer class="footer bg-primary">
       <div class="container text-center text-white">
-        <p class="p-3">&copy; Todos los derechos reservados.</p>
+        <p class="pt-3">&copy; Todos los derechos reservados.</p>
       </div>
     </footer>
+
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (() => {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+          form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+          }, false)
+        })
+      })()
+    </script>
 </body>
 </html>
