@@ -1,0 +1,11 @@
+@use '../custom' as mix;
+
+.partidos{
+    @include mix.media-breakpoint-up(md) {
+       @include mix.do-grid(2);
+    }
+
+    @include mix.media-breakpoint-up(lg) {
+        @include mix.do-grid(3);
+    }
+}

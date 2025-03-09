@@ -2,13 +2,22 @@
 $azul: #3e65a0;
 $gris: #f2f2f2;
 $blanco: #ffffff;
+$negro-claro: #161616;
+$negro: #202020;
 
 // Reescribimos variable de Bootstrap
 $primary: $azul;
 $secondary: $gris;
 $white: $blanco;
+$black: $negro-claro;
+$dark: $negro;
 
-
+// Crear grid
+@mixin do-grid($num-columns, $gap: 10px) {
+    display: grid;
+    grid-template-columns: repeat($num-columns, 1fr);
+    gap: $gap;
+}
 
 
 
