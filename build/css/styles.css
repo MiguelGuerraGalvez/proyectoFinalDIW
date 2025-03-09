@@ -11850,8 +11850,15 @@ textarea.form-control-lg {
   margin: 0%;
 }
 
+body {
+  height: 100vh;
+}
+
+.header {
+  width: 100%;
+}
 .header__logo {
-  width: 10rem;
+  width: 7rem;
   transition: transform 1s;
 }
 .header__logo:hover {
