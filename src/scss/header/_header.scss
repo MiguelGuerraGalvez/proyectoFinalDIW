@@ -1,0 +1,10 @@
+.header{
+    &__logo{
+        width: 10rem;
+        transition: transform 1s;
+
+        &:hover{
+            transform: rotate(3turn);
+        }
+    }
+}
