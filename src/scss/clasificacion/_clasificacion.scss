@@ -1,13 +1,9 @@
 @use '../custom' as mix;
 
 .clasificacion{
-    @include mix.do-grid(9);
-
-    @include mix.media-breakpoint-up(lg) {
-        @include mix.do-grid(8);
-    }
-
     width: 98vw;
+    
+    @include mix.do-grid(8);
 
     &__equipo{
         font-size: 0.6rem;

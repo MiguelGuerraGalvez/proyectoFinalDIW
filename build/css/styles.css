@@ -11871,6 +11871,15 @@ body {
   width: 100%;
 }
 
+.copa {
+  width: 50vw;
+}
+@media (min-width: 992px) {
+  .copa {
+    width: 30vw;
+  }
+}
+
 @media (min-width: 768px) {
   .partidos {
     display: grid;
@@ -11887,17 +11896,10 @@ body {
 }
 
 .clasificacion {
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  gap: 10px;
   width: 98vw;
-}
-@media (min-width: 992px) {
-  .clasificacion {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 10px;
-  }
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
 }
 .clasificacion__equipo {
   font-size: 0.6rem;
